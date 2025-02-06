@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weekly Availability Manager
 
-## Getting Started
+This project allows you to manage weekly availability for users.
 
-First, run the development server:
+## Setup Instructions
 
-```bash
+Follow the steps below to set up the project locally.
+
+### 1. Clone the repository or extract the compressed file
+
+Clone the repo from [https://github.com/saisankar-1919/availability-manager](https://github.com/saisankar-1919/availability-manager) or extract the compressed file.
+
+### 2. Navigate to the root directory
+
+cd weekly-availability-manager
+
+### 3. Install dependencies
+
+npm install
+
+### 4. Create a .env file in the root directory of the project and add the following environment variables
+
+REDIS_HOST=<your_redis_host_url>
+REDIS_PORT=<your_redis_port>
+NEXT_PUBLIC_BASE_URL="http://localhost:3000/"
+
+### 5. Start your Redis server locally (if it's not already running)
+
+redis-server
+
+### 6. Start the application in development mode
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 7. Once the application is running, open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.

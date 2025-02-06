@@ -1,4 +1,3 @@
-// utils.ts
 export const incrementTimeBy30Minutes = (time: string): string => {
   const [hours, minutes] = time.split(":").map(Number);
   const totalMinutes = hours * 60 + minutes + 30;
