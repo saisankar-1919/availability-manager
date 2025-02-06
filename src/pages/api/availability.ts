@@ -1,13 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import redis from "../../lib/redis";
+import { validateAvailabilityPayload } from "@/utils/apiUtils";
 
 const saveAvailability = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const { userId, timeSlots, selectedDays } = req.body;
 
-    if (!userId || !timeSlots || !selectedDays) {
-      return res.status(400).json({ message: "Invalid request data" });
-    }
+    validateAvailabilityPayload(userId, timeSlots, selectedDays);
 
     try {
       await redis.set(

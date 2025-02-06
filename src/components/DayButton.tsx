@@ -1,4 +1,3 @@
-// components/DayButton.tsx
 import React from "react";
 import { Button } from "@mui/material";
 
@@ -18,7 +17,11 @@ const DayButton: React.FC<DayButtonProps> = ({
   <Button
     variant={isSelected ? "contained" : "outlined"}
     onClick={() => toggleDay(name)}
-    sx={{ margin: 0.5 }}
+    sx={{
+      margin: 0.5,
+      padding: 2.5,
+      borderRadius: "50px",
+    }}
   >
     {label}
   </Button>
